@@ -25,6 +25,7 @@ body {
 	grid-template-rows: repeat(6, 82px) repeat(1, calc(897px - (9*82px))) repeat(3, 82px);
 	margin: 30px;
 	border-radius: 25px;
+	border: 2px solid #00bfff;
 	background: rgba(0, 0, 255, 0.15);
 }
 
