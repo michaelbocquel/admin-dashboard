@@ -47,20 +47,94 @@ body {
 
 .header {
 	grid-area: header;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
 	margin: 30px;
 	border-radius: 15px;
-	background-color: blue;
+	border: 2px solid #00bfff;
+	background: rgba(0, 0, 255, 0.15);
+}
+
+.header-main {
+	display: grid;
+	grid-template-columns: 64px 1fr 64px 64px 130px;
+	align-items: center;
+}
+
+.header-main input {
+	width: 50%;
+}
+
+.header-main img {
+	scale: 0.5;
+}
+
+.header-main p {
+	color: white;
+	font-size: 24px;
+}
+
+
+.header-profile {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-template-areas:
+		'user-icon hi-para new-button upload-button share-button'
+		'user-icon user-para new-button upload-button share-button';
+	align-items: center;
+	padding: 20px;
+}
+
+.header-profile p {
+	color: white;
+	font-size: 24px;
+}
+
+.header-profile button {
+	width: 150px;
+	height: 60px;
+	margin-left: 30px;
+	border: 2px solid #00bfff;
+	background-color: #00bfff;
+	border-radius: 20px;
+	color: white;
+	font-size: 18px;
+}
+
+.user-icon {
+	grid-area: user-icon;
+}
+
+.hi-para {
+	grid-area: hi-para;
+}
+
+.user-para {
+	grid-area: user-para;
+}
+
+.new-button {
+	grid-area: new-button;
+}
+
+.upload-button {
+	grid-area: upload-button;
+}
+
+.share-button {
+	grid-area: share-button;
 }
 
 .main-content {
 	grid-area: main;
 	margin: 30px;
-	background-color: blue;
+	border: 2px solid #00bfff;
+	background: rgba(0, 0, 255, 0.15);
 	border-radius: 15px;
 }
 
 /* ----- ICONS -----
 
-	Freepik
+	Freepik - Flaticon
 
 ----- ICONS ----- */
