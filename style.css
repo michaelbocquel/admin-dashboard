@@ -18,6 +18,8 @@ body {
 		radial-gradient(at 100% 100%, hsla(240, 100%, 40%, 0.7) 0px, transparent 50%)
 }
 
+/* ----- SIDEBAR ----- */
+
 .sidebar {
 	padding: 20px;
 	grid-area: sidebar;
@@ -44,6 +46,8 @@ body {
 	color: white;
 	font-size: 24px;
 }
+
+/* ----- HEADER ----- */
 
 .header {
 	grid-area: header;
@@ -125,12 +129,82 @@ body {
 	grid-area: share-button;
 }
 
+/* ----- MAIN CONTENT ----- */
+
 .main-content {
 	grid-area: main;
+	display: grid;
+	grid-template-areas:
+		'projects projects announcements'
+		'projects projects announcements'
+		'projects projects announcements'
+		'projects projects trending'
+		'projects projects trending'
+		'projects projects trending';
+	grid-template-columns: 1fr 1fr 1fr;
 	margin: 30px;
+	padding: 20px;
 	border: 2px solid #00bfff;
 	background: rgba(0, 0, 255, 0.15);
 	border-radius: 15px;
+}
+
+.main-projects {
+	grid-area: projects;
+	display: grid;
+	grid-template-rows: 60px 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.projects-title {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.main-announcements {
+	grid-area: announcements;
+}
+
+.main-trending {
+	grid-area: trending;
+	display: grid;
+}
+
+.main-trending img {
+	scale: 0.5;
+}
+
+.trend {
+	display: grid;
+	grid-template-areas:
+		'user-icon user-at'
+		'user-icon user-name';
+	grid-template-columns: 64px 1fr;
+}
+
+.trend img {
+	grid-area: user-icon;
+}
+
+.trend.user-at {
+	grid-area: user-at;
+}
+
+.trend.user-name {
+	grid-area: user-name;
+}
+
+p.main-title {
+	font-size: 22px;
+	padding: 0px 0 20px;
+}
+
+p.main-subtitle {
+	font-size: 18px;
+}
+
+p {
+	color: white;
 }
 
 /* ----- ICONS -----
